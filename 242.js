@@ -6,16 +6,15 @@
 var isAnagram = function(s, t) {
     if (s.length !== t.length) return false;
 
-    const sMap = new Map();
-    const tMap = new Map();
+    const map = new Map();
 
     for (let i = 0; i < s.length; i++) {
-        sMap.set(s[i], (sMap.get(s[i]) || 0) + 1)
-        tMap.set(t[i], (tMap.get(t[i]) || 0) + 1)
+        map.set(s[i], (map.get(s[i]) || 0) + 1)
+        map.set(t[i], (map.get(t[i]) || 0) - 1)
     }
 
-    for (let [key, value] of sMap) {
-        if (tMap.get(key) !== value)
+    for (let [_, value] of map) {
+        if (value !== 0)
             return false;
     }
     
