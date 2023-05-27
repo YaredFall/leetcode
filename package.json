@@ -1,0 +1,14 @@
+{
+  "name": "leetcode-solutions",
+  "version": "1.0.0",
+  "description": "My leetcode solutions",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "YaredFall",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  },
+  "type": "module"
+}
