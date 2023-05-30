@@ -7,4 +7,8 @@ describe(("347. Top K Frequent Elements"), () => {
     test('case 2', () => {
         expect(topKFrequent([1], 1)).toEqual([1]);
     });
+
+    test('additional case 1', () => {
+        expect(topKFrequent([1,1,1,2,2,3,4,4,4], 2).sort()).toEqual([1,4]);
+    });
 })

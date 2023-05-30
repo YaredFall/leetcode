@@ -11,7 +11,7 @@ var topKFrequent = function(nums, k) {
         map.set(n, (currentCount ?? 0) + 1);
     }
 
-    return [...map].sort((kv1, kv2) => kv2[1] - kv1[1]).slice(0, k).map(kv => kv[0]);
+    return [...map.keys()].sort((a, b) => map.get(b) - map.get(a)).slice(0, k);
 }
 
 module.exports = topKFrequent
